@@ -8,7 +8,6 @@ A novel simulation approach for quasi-one-dimensional and two dimensional materi
   - [Features](#features)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
 
 ## Introduction
 
