@@ -4,7 +4,6 @@ A novel simulation approach for quasi-one-dimensional and two dimensional materi
 
 ## Table of Contents
 
-- [Orientation dependent solar cell simulation](#project-name)
   - [Introduction](#introduction)
   - [Features](#features)
   - [Getting Started](#getting-started)
