@@ -1,6 +1,6 @@
 # Orientation dependent solar cell simulation
 
-A novel simulation approach for quasi-one-dimensional and two dimensional materials. The device simulation is divided into multiple individual simulations for each layer or ribbon, by assuming only transport along the ribbon or layer, due to their considerably higher electron mobilities.
+A novel simulation approach for quasi-one-dimensional and two dimensional materials. The device simulation is divided into multiple individual simulations for each layer or ribbon, by assuming predominant charge transport along the ribbon or layer directions, due to their considerably higher electron mobilities.
 
 ## Table of Contents
 
