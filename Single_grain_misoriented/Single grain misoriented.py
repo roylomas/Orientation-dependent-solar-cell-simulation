@@ -123,9 +123,6 @@ mh_p_tio2 = 0.8*emass #hole effective mass
 angu = 45 #angle
 ang = (np.pi/180) #degress to radian conversion
 
-'''Bundling (this reduces the computational time by bundling multiple inidividual ribbons and calculating using their mean ending position)'''
-bundle = 10
-name = '%a grain.png' %angu #saves the data according to their orientation
 
 '''Recombination velocities'''
 S_b = 1*(10**7) #cm s^-1 back contact
@@ -501,15 +498,9 @@ Jtotalma_sin_ang.tofile('Jtotal {} degs {} Voc.csv'.format(angu, Voc_eff2),sep='
 '''Components of the J-V curve'''
 plt.figure(7002)
 plt.plot(V, Jtotalma_sin, label='$J_{Total}$', linewidth=2)
-#plt.plot(V, Jscrma_sin + Jqnrma_sin - Jdarkma_sin, label='Negative $J_{qnr}$')
 plt.plot(V, Jqnrma_sin, label='$J_{QNR}$', linewidth=2)
 plt.plot(V, -Jdarkma_sin, label='$J_{Dark}$', linewidth=2)
 plt.plot(V, Jscrma_sin, label='$J_{SCR}$', linewidth=2)
-#plt.plot(V, Jqnrma_sin3_test, label='$J_{SCR test}$', linewidth=2)
-#plt.plot(scaps.iloc[:,0], -scaps.iloc[:,1], label='SCAPS-1D', linewidth=2)
-#plt.plot(scaps.iloc[:,0], -scaps.iloc[:,1]*0.7225, label='SCAPS-1D (adjusted)', linewidth=2)
-#plt.plot(V, -Jdark, label='J dark')
-#plt.plot(V, J_total, label='Jtotal')
 plt.legend(loc='best', fontsize=12)
 plt.xlabel('Voltage (V)', fontsize=14)
 plt.ylabel('Current density (mA/cm$^2$)', fontsize=14) #Using m^-2 s^-1
@@ -522,15 +513,9 @@ plt.savefig('J-V components ideal', bbox_inches="tight", dpi=300)
 
 plt.figure(7003)
 plt.plot(V, Jtotalma_sin_ang, label='$J_{Total}$', linewidth=2)
-#plt.plot(V, Jscrma_sin + Jqnrma_sin - Jdarkma_sin, label='Negative $J_{qnr}$')
 plt.plot(V, Jqnrma_sin3, label='$J_{QNR}$', linewidth=2)
 plt.plot(V, -Jdarkma_sin3, label='$J_{Dark}$', linewidth=2)
 plt.plot(V, Jscrma_sin3, label='$J_{SCR}$', linewidth=2)
-#plt.plot(V, Jqnrma_sin3_test, label='$J_{SCR test}$', linewidth=2)
-#plt.plot(scaps.iloc[:,0], -scaps.iloc[:,1], label='SCAPS-1D', linewidth=2)
-#plt.plot(scaps.iloc[:,0], -scaps.iloc[:,1]*0.7225, label='SCAPS-1D (adjusted)', linewidth=2)
-#plt.plot(V, -Jdark, label='J dark')
-#plt.plot(V, J_total, label='Jtotal')
 plt.legend(loc='best', fontsize=12)
 plt.xlabel('Voltage (V)', fontsize=14)
 plt.ylabel('Current density (mA/cm$^2$)', fontsize=14) #Using m^-2 s^-1
